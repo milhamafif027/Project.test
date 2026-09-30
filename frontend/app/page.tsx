@@ -18,20 +18,15 @@ export default function Home() {
 
       {/* Main Hero Section / Content */}
       <div className="max-w-4xl mx-auto px-6 py-16 text-center my-auto w-full">
-        <div className="inline-flex items-center space-x-2 rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-600 border border-emerald-200 mb-6 shadow-sm">
-          <span>Sistem Registrasi & Notifikasi Email Otomatis</span>
-        </div>
 
         {/* Judul Utama */}
         <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight mb-6">
-          Platform Pendaftaran Pengguna dengan{" "}
+          Project Test{" "}
           <span className="text-emerald-600">Go & Next.js</span>
         </h1>
 
         <p className="text-slate-600 max-w-2xl mx-auto text-sm sm:text-base mb-8 leading-relaxed">
-          Mengintegrasikan performa tinggi backend Go (Fiber & MySQL) dengan
-          antarmuka modern Next.js, dilengkapi pengiriman notifikasi via SMTP
-          Ethereal.
+          Uji coba project dengan teknologi Go dan Next.js.
         </p>
 
         {/* Tombol Menuju Pendaftaran */}
