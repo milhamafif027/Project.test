@@ -47,7 +47,7 @@ export default function RegisterForm() {
           Formulir Pendaftaran
         </h2>
         <p className="mt-1 text-xs text-slate-500">
-          Masukkan data diri Anda.
+          Masukkan data diri Anda untuk menguji integrasi backend Go & SMTP.
         </p>
       </div>
 
@@ -74,7 +74,7 @@ export default function RegisterForm() {
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full rounded-xl bg-blue-50/50 border border-slate-200 px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
+            className="w-full rounded-xl bg-emerald-50/40 border border-slate-200 px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:border-emerald-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20 transition-all"
             placeholder="John Doe"
           />
         </div>
@@ -89,7 +89,7 @@ export default function RegisterForm() {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full rounded-xl bg-blue-50/50 border border-slate-200 px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
+            className="w-full rounded-xl bg-emerald-50/40 border border-slate-200 px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:border-emerald-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20 transition-all"
             placeholder="name@example.com"
           />
         </div>
@@ -104,7 +104,7 @@ export default function RegisterForm() {
             value={formData.password}
             onChange={handleChange}
             required
-            className="w-full rounded-xl bg-blue-50/50 border border-slate-200 px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
+            className="w-full rounded-xl bg-emerald-50/40 border border-slate-200 px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:border-emerald-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20 transition-all"
             placeholder="••••••••"
           />
         </div>
@@ -112,7 +112,7 @@ export default function RegisterForm() {
         <button
           type="submit"
           disabled={loading}
-          className="w-full mt-2 rounded-xl bg-blue-600 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/40 active:scale-[0.98] transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+          className="w-full mt-2 rounded-xl bg-emerald-600 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-600/20 hover:bg-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/40 active:scale-[0.98] transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
         >
           {loading ? (
             <>

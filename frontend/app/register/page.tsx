@@ -6,7 +6,7 @@ import RegisterForm from "../components/RegisterForm";
 
 export default function RegisterPageRoute() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 text-slate-800 flex flex-col justify-between p-6">
+    <main className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-emerald-50 text-slate-800 flex flex-col justify-between p-6">
       {/* Top Navigation */}
       <div className="w-full max-w-md mx-auto pt-4 flex justify-between items-center">
         <Link
@@ -15,7 +15,7 @@ export default function RegisterPageRoute() {
         >
           <span>← Kembali ke Beranda</span>
         </Link>
-        <span className="text-xs text-blue-600 font-medium">
+        <span className="text-xs text-emerald-600 font-medium">
           Halaman Registrasi
         </span>
       </div>
