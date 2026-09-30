@@ -1,0 +1,13 @@
+# Node & Next.js
+node_modules/
+.next/
+out/
+dist/
+.env*
+.DS_Store
+
+# Golang
+*.exe
+*.test
+*.out
+test.db
