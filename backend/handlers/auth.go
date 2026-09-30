@@ -4,6 +4,7 @@ import (
 	"crypto/tls"
 	"fmt"
 	"net/smtp"
+	"os"
 
 	"backend/database"
 	"backend/models"
@@ -40,11 +41,11 @@ func Register(c *fiber.Ctx) error {
 		})
 	}
 
-	// Kirim Email via Ethereal SMTP
-	smtpHost := "smtp.ethereal.email"
-	smtpPort := "587"
-	senderEmail := "mertie50@ethereal.email"
-	senderPass := "2BDRQMESZc6a37dY8Z"
+	// Ambil konfigurasi SMTP secara dinamis dari file .env
+	smtpHost := os.Getenv("SMTP_HOST")
+	smtpPort := os.Getenv("SMTP_PORT")
+	senderEmail := os.Getenv("SMTP_USER")
+	senderPass := os.Getenv("SMTP_PASS")
 
 	subject := "Subject: Pendaftaran Berhasil!\n"
 	body := fmt.Sprintf("Halo %s,\n\nSelamat! Akun Anda dengan email %s sudah berhasil terdaftar di sistem kami.", user.Name, user.Email)
@@ -72,7 +73,8 @@ func sendMailTLS(addr string, a smtp.Auth, from string, to []string, msg []byte)
 	}
 	defer client.Quit()
 
-	if err = client.StartTLS(&tls.Config{InsecureSkipVerify: true, ServerName: "smtp.ethereal.email"}); err != nil {
+	smtpHost := os.Getenv("SMTP_HOST")
+	if err = client.StartTLS(&tls.Config{InsecureSkipVerify: true, ServerName: smtpHost}); err != nil {
 		return err
 	}
 
