@@ -20,7 +20,6 @@ func Register(c *fiber.Ctx) error {
 		})
 	}
 
-	// Cek email terdaftar
 	var existingUser models.User
 	if err := database.DB.Where("email = ?", req.Email).First(&existingUser).Error; err == nil {
 		return c.Status(fiber.StatusBadRequest).JSON(fiber.Map{
@@ -28,7 +27,6 @@ func Register(c *fiber.Ctx) error {
 		})
 	}
 
-	// Simpan user
 	user := models.User{
 		Name:     req.Name,
 		Email:    req.Email,
@@ -41,7 +39,6 @@ func Register(c *fiber.Ctx) error {
 		})
 	}
 
-	// Ambil konfigurasi SMTP secara dinamis dari file .env
 	smtpHost := os.Getenv("SMTP_HOST")
 	smtpPort := os.Getenv("SMTP_PORT")
 	senderEmail := os.Getenv("SMTP_USER")
@@ -65,7 +62,6 @@ func Register(c *fiber.Ctx) error {
 	})
 }
 
-// Helper TLS Mailer
 func sendMailTLS(addr string, a smtp.Auth, from string, to []string, msg []byte) error {
 	client, err := smtp.Dial(addr)
 	if err != nil {

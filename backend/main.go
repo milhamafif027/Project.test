@@ -12,17 +12,13 @@ import (
 )
 
 func main() {
-	// Inisialisasi Database
 	database.ConnectDB()
 
-	// Setup Fiber App
 	app := fiber.New()
 	app.Use(cors.New())
 
-	// Routing
 	app.Post("/api/register", handlers.Register)
 
-	// Jalankan Server
 	fmt.Println("Server Golang Fiber berjalan di http://localhost:8080")
 	log.Fatal(app.Listen(":8080"))
 }
